@@ -10,6 +10,7 @@ books.map((book) => <Books key={book.id} book={book} />)
   </ul>
 
 );
+
 BookContent.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({

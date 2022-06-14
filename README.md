@@ -65,7 +65,7 @@ The Project should now be live on your browser
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/abiodunraheem/math-magicians/issues).
+Feel free to check the [issues page](https://github.com/abiodunraheem/book-store/issues).
 
 ## Show your support
 
