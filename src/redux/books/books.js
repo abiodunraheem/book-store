@@ -4,20 +4,20 @@ const REMOVE_BOOK = 'book-store/books/REMOVE_BOOK';
 const initialBook = [
   {
     id: 1,
-    author: 'Daniel Banda',
-    books: 'The fierce village',
+    author: 'Chinua Achebe',
+    books: 'Things fall apart',
     category: '',
   },
   {
     id: 2,
-    author: 'Gofrey Zimba',
-    books: 'Good deeds',
+    author: 'Abiodun Raheem',
+    books: 'The Lion of Bourdellon',
     category: '',
   },
   {
     id: 3,
-    author: 'Mathews Zulu',
-    books: 'The old village',
+    author: 'Wole Soyinka',
+    books: 'The Lion And The Jewel',
     category: '',
   },
 ];
