@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import './Navbar.css';
 import { FaRegUser } from 'react-icons/fa';
 
 const Navbar = () => (
