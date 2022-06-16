@@ -5,10 +5,10 @@ import AddBook from './AddBook';
 
 const BookContainer = () => {
   const infor = useSelector((state) => state.bookReducer);
-  const books = infor;
+  // const books = infor;
   return (
     <div className="main-container">
-      <BookContent books={books} />
+      <BookContent books={infor} />
       <AddBook />
     </div>
   );
