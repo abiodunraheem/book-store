@@ -1,58 +1,25 @@
-import axios from 'axios';
+/* eslint-disable no-param-reassign */
+import { createSlice } from '@reduxjs/toolkit';
 
-const ADD_BOOK = 'book-store/books/ADD_BOOK';
-const REMOVE_BOOK = 'book-store/books/REMOVE_BOOK';
-const FETCH_BOOK = 'book-store/books/FETCH_BOOK';
-
-const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/XTlZEjSDzVHecB5Jy41Z/books';
-
-const initialBook = [];
-
-const bookReducer = (state = initialBook, action) => {
-  switch (action.type) {
-    case ADD_BOOK: {
-      const objBook = {
-        item_id: `book${Date.now()}`,
-        title: action.book.book,
-        author: action.book.author,
-        category: action.book.category,
-      };
-      const newState = [`book${Date.now()}`, [{
-        title: action.book.book,
-        author: action.book.author,
-        category: action.book.category,
-      }]];
-
-      axios.post(baseUrl, objBook);
-      return [...state, newState];
-    }
-
-    case REMOVE_BOOK: {
-      axios.delete(`${baseUrl}/${action.id}`);
-      const remove = state.filter((book) => book[0] !== action.id);
-
-      return remove;
-    }
-
-    case FETCH_BOOK:
-      return action.newBook;
-
-    default:
-      return state;
-  }
+const initialState = {
+  books: {},
 };
-
-export const addBook = (book) => ({ type: ADD_BOOK, book });
-export const removeBook = (id) => ({
-  type: REMOVE_BOOK, id,
+const books = createSlice({
+  name: 'book',
+  initialState,
+  reducers: {
+    replaceBook(state, action) {
+      state.books = { ...action.payload };
+    },
+    addBook(state, action) {
+      state.books = { ...state.books, ...action.payload };
+    },
+    removeBook(state, action) {
+      delete state.books[action.payload];
+    },
+  },
 });
 
-export const fetchBook = () => (dispatch) => {
-  axios.get(baseUrl).then((response) => {
-    const data = Object.entries(response.data);
-    dispatch({
-      type: FETCH_BOOK, newBook: data,
-    });
-  });
-};
-export default bookReducer;
+export const booksActions = books.actions;
+
+export default books;
