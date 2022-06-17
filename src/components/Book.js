@@ -1,25 +1,39 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import Books from './Books';
+import { useDispatch } from 'react-redux';
+import { booksActions } from '../redux/books/books';
+import { deleteBookData } from '../redux/books/booksActions';
+import classes from './Book.module.css';
 
-const BookContent = ({ books }) => (
-  <ul className="book-content">
-    {
-books.map((book) => <Books key={book.id} book={book} />)
-}
-  </ul>
+const Book = ({
+  id, title, author, category,
+}) => {
+  const dispatch = useDispatch();
 
-);
-
-BookContent.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-      category: PropTypes.string.isRequired,
-    }).isRequired,
-  ).isRequired,
+  const removeBookHandler = (e) => {
+    dispatch(deleteBookData(e.target.id));
+    dispatch(booksActions.removeBook(e.target.id));
+  };
+  return (
+    <div className={classes.book}>
+      <div className={classes.category}>{category}</div>
+      <h3 className="title">{title}</h3>
+      <div className="author">{author}</div>
+      <div className={classes.buttons}>
+        <button type="button">Comments</button>
+        <button id={id} type="button" onClick={removeBookHandler}>
+          Remove
+        </button>
+        <button type="button">Edit</button>
+      </div>
+    </div>
+  );
 };
 
-export default BookContent;
+Book.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+};
+
+export default Book;

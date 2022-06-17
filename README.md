@@ -1,75 +1,56 @@
-# BOOK STORE
+# Bookstore
 
-> A web app for adding, removing and editing books.
+> Bookstore is a website where you can add a list of books, edit or remove a book. This website is built with React, React Router and Redux
 
+## Built Using
 
-## Built With
+- ReactJs.
+- Redux
+- React Router
+- CSS.
+- GitFlow.
 
-- HTML
-- CSS
-- JAVASCRIPT
-- React
+## Run the app in the development mode(Port 3000)
 
-## Live Demo (if available)
-[Live Demo Link](Ccoming soon)
-
-
-
-## Getting Started
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-- Web browser
-- Code editor
-
-### Setup
-
-
-```bash
-npm install
 ```
-
-```bash
-npm build
-```
-
-```bash
 npm start
 ```
 
-### Run the following commands to run linter tests
+## Launches the test runner
 
-
-StyleLint
-```bash
-npx stylelint "**/*.{css,scss}"
+```
+npm test
 ```
 
-ESLint
-```bash
-npx eslint .
+## Builds the app for production
+
+```
+npm run build
 ```
 
+## Demo App
 
+**live demo** [To be Published.]()
 
-The Project should now be live on your browser
+## Author
 
-👤 **Author**
+👤 **Raheem Abiodun**
 
 - GitHub: [@Abiodunraheem](https://github.com/Abiodunraheem)
 - Twitter: [@abiodunraheem23](https://twitter.com/abiodunraheem23)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/abiodun-raheem-908b33154)
+## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/abiodunraheem/book-store/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to code reviewers and to everyone who reviewed the project and made suggestions.
+
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
