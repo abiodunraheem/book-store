@@ -1,47 +1,93 @@
-# Bookstore
+# BookStore
 
-> Bookstore is a website where you can add a list of books, edit or remove a book. This website is built with React, React Router and Redux
+> BookStore is project built using React and redux.
 
-## Built Using
 
-- ReactJs.
+Additional description about the project and its features.
+
+# Built With
+
+### Major languages
+- HTML
+- CSS
+- JS
+- JSX
+
+### Frameworks/Libraries
+- React
 - Redux
-- React Router
-- CSS.
-- GitFlow.
 
-## Run the app in the development mode(Port 3000)
+## Live Demo
 
+[Click here](https://react-redux-books.netlify.app/) 
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
 ```
-npm start
-```
+git clone git@github.com:sainingo/bookstore
 
-## Launches the test runner
+cd bookstore
 
-```
-npm test
-```
+npm install 
 
-## Builds the app for production
-
-```
-npm run build
+npm start 
 ```
 
-## Demo App
+### Prerequisites
+```
+node modules 
+```
+### Setup
 
-**live demo** [To be Published.]()
+In the project directory, you can run:
 
-## Author
+### `npm start`
 
-👤 **Raheem Abiodun**
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### Install
+
+### Run tests
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### Deployment
+
+👤 **Author**
 
 - GitHub: [@Abiodunraheem](https://github.com/Abiodunraheem)
 - Twitter: [@abiodunraheem23](https://twitter.com/abiodunraheem23)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/abiodun-raheem-908b33154)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/abiodunraheem/book-store/issues).
 
 ## Show your support
 
@@ -50,6 +96,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Hat tip to code reviewers and to everyone who reviewed the project and made suggestions.
+- Hat tip to book-store API
 
 ## 📝 License
 
