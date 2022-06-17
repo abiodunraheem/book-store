@@ -2,9 +2,6 @@ import initialState from './initialState';
 
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/bz219eFkAAsyRg8dUJ4v/books';
 
-// const ADD_BOOK = 'bookstore/src/redux/books/ADD_BOOK';
-// const REMOVE_BOOK = 'bookstore/src/redux/categories/REMOVE_BOOK';
-
 const ADD_BOOK = 'bookstore/ADD_BOOK';
 const GET_BOOKS_SUCCESS = 'bookstore/GET_BOOKS_SUCCESS';
 const GET_BOOKS_FAILURE = 'bookstore/GET_BOOKS_FAILURE';
