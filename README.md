@@ -74,7 +74,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 - GitHub: [@Abiodunraheem](https://github.com/Abiodunraheem)
 - Twitter: [@abiodunraheem23](https://twitter.com/abiodunraheem23)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abiodun-raheem-908b33154)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abiodun-raheem)
 
 ## Show your support
 

@@ -2,16 +2,19 @@ import initialState from './initialState';
 
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/bz219eFkAAsyRg8dUJ4v/books';
 
+// actions
 const ADD_BOOK = 'bookstore/ADD_BOOK';
 const GET_BOOKS_SUCCESS = 'bookstore/GET_BOOKS_SUCCESS';
 const GET_BOOKS_FAILURE = 'bookstore/GET_BOOKS_FAILURE';
 const GET_BOOKS_LOADING = 'bookstore/GET_BOOKS_LOADING';
 
+// action creators
 export const addBook = (book) => ({ type: ADD_BOOK, payload: book });
 export const getBooksSuccess = (books) => ({ type: GET_BOOKS_SUCCESS, payload: books });
 export const getBooksFailure = (errMsg) => ({ type: GET_BOOKS_FAILURE, payload: errMsg });
 export const getBooksLoading = () => ({ type: GET_BOOKS_LOADING });
 
+// get all books from API
 export const getBooks = () => (dispatch) => {
   dispatch(getBooksLoading());
   fetch(url)
@@ -30,6 +33,7 @@ export const getBooks = () => (dispatch) => {
     });
 };
 
+// remove book from API
 export const removeBook = (id) => (dispatch) => {
   fetch(`${url}/${id}`, {
     method: 'DELETE',
@@ -39,6 +43,7 @@ export const removeBook = (id) => (dispatch) => {
     });
 };
 
+// register new book on API
 export const registerNewBook = (newBook) => (dispatch) => {
   fetch(url, {
     method: 'POST',
@@ -52,6 +57,7 @@ export const registerNewBook = (newBook) => (dispatch) => {
     });
 };
 
+// reducer
 const books = (state = initialState, action) => {
   switch (action.type) {
     case GET_BOOKS_LOADING:
